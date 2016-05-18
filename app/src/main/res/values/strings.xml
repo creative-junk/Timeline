@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Timeline</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_sign_up">Sign Up</string>
+    <string name="str_log_in">Log In</string>
+    <string name="str_acc_prompt">Don\'t have a Timeline Account yet?</string>
+    <string name="str_terms_of_use"><![CDATA[By Using Timeline, you agree to Timeline\'s Terms of Use and Privacy Policy]]></string>
+    <string name="str_forgot_password">Forgot Password?</string>
+    <string name="username_hint">Email or Phone</string>
+    <string name="password_hint">Password</string>
+</resources>

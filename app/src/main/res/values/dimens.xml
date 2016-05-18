@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Login Button -->
+    <dimen name="btn_login_radius">5dp</dimen>
+    <dimen name="btn_login_margin_bottom">18dp</dimen>
+    <dimen name="btn_login_padding_bottom">15dp</dimen>
+    <dimen name="btn_login_padding_left">84dp</dimen>
+    <dimen name="btn_login_padding_right">84dp</dimen>
+    <dimen name="btn_login_padding_top">15dp</dimen>
+    <dimen name="btn_login_text_size">18sp</dimen>
+    <dimen name="btn_login_stroke_width">1dp</dimen>
+
+    <!-- Signup Button -->
+    <dimen name="btn_signup_margin_bottom">15dp</dimen>
+    <dimen name="btn_signup_padding_button">15dp</dimen>
+    <dimen name="btn_signup_padding_left">80dp</dimen>
+    <dimen name="btn_signup_padding_right">80dp</dimen>
+    <dimen name="btn_signup_padding_top">15dp</dimen>
+    <dimen name="btn_signup_text_size">18sp</dimen>
+    <dimen name="btn_signup_stroke_width">1dp</dimen>
+    <dimen name="btn_signup_radius">5dp</dimen>
+
+    <!-- Username -->
+    <dimen name="username_width">210dp</dimen>
+    <dimen name="username_margin_top">75dp</dimen>
+
+    <!-- Password -->
+    <dimen name="password_width">210dp</dimen>
+    <dimen name="password_margin_top">125dp</dimen>
+    <dimen name="forgot_password_margin_bottom">28dp</dimen>
+
+
+</resources>
