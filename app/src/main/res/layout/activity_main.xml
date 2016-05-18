@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMain">
+
+    <ImageView
+        android:id="@+id/app_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <TextView
+        android:id="@+id/tv_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:layout_marginTop="91dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_appname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/btn_login_margin_bottom"
+        android:background="@drawable/bg_login_btn"
+        android:paddingBottom="@dimen/btn_login_padding_bottom"
+        android:paddingLeft="@dimen/btn_login_padding_left"
+        android:paddingRight="@dimen/btn_login_padding_right"
+        android:paddingTop="@dimen/btn_login_padding_top"
+        android:text="@string/str_log_in"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/btn_login_text_size" />
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/forgot_password_margin_bottom"
+        android:text="@string/str_forgot_password"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/acc_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forgot_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_acc_prompt"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_prompt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/btn_signup_margin_bottom"
+        android:background="@drawable/bg_sign_up"
+        android:paddingBottom="@dimen/btn_signup_padding_button"
+        android:paddingLeft="@dimen/btn_signup_padding_left"
+        android:paddingRight="@dimen/btn_signup_padding_right"
+        android:paddingTop="@dimen/btn_signup_padding_top"
+        android:text="@string/str_sign_up"
+        android:textAllCaps="false"
+        android:textSize="@dimen/btn_signup_text_size" />
+
+
+    <EditText
+        android:id="@+id/emailphone"
+        android:layout_width="@dimen/username_width"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignTop="@+id/tv_appname"
+        android:layout_marginTop="@dimen/username_margin_top"
+        android:hint="@string/username_hint"
+        android:textColor="@android:color/white"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="@dimen/password_width"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignTop="@+id/tv_appname"
+        android:layout_marginTop="@dimen/password_margin_top"
+        android:inputType="textPassword"
+        android:hint="@string/password_hint"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>
