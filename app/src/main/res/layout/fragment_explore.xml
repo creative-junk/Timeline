@@ -1,14 +1,61 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="1dp"
-    tools:context="crysoftdynamics.timeline.Explore">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/exploreLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="1dp"
+        tools:context="crysoftdynamics.timeline.Explore">
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+            <!-- When there are no Pictures to Explore -->
+            <TextView
+                android:id="@+id/emptyExplore"
+                fontPath="fonts/sourcesansregular.ttf"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="18dp"
+                android:text="Sorry, there are no photos to explore at the moment"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:gravity="center"
+                tools:ignore="MissingPrefix" />
+
+            <ImageView
+                android:id="@+id/emptyGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/emptyExplore"
+                android:background="@drawable/ic_photo" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center_horizontal">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:src="@drawable/ic_addphoto"
+                app:elevation="6dp"
+                android:onClick="takePicture"
+                app:pressedTranslationZ="24dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

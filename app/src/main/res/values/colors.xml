@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_color">#5c3bb5</color>
+  <!--  <color name="primary_color">#5c3bb5</color> -->
+    <color name="primary_color">#512DA8</color>
     <color name="alternate_primary_color">#1ba8ae</color>
     <color name="optional_color">#03a588</color>
+    <!-- <color name="ColorPrimary">#5c3bb5</color> -->
+    <!-- Deep Purple 700 -->
+    <color name="ColorPrimary">#512DA8</color>
+    <color name="ColorPrimaryDark">#462d8a</color>
+    <color name="textColorPrimary">#fff</color>
+    <color name="navigationBarColor">#462d8a</color>
 
 </resources>

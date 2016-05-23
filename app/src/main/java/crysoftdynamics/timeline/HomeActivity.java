@@ -1,5 +1,6 @@
 package crysoftdynamics.timeline;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,11 +26,11 @@ public class HomeActivity extends AppCompatActivity implements Home.OnFragmentIn
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private int[] tabIcons = {
-        R.drawable.ic_tab_home,
-            R.drawable.ic_tab_add,
-            R.drawable.ic_tab_notifications,
-            R.drawable.ic_tab_explore,
-            R.drawable.ic_tab_nearme
+        R.drawable.ic_home,
+            R.drawable.ic_addpeople,
+            R.drawable.ic_notifications,
+            R.drawable.ic_shutter,
+            R.drawable.ic_nearme
     };
 
     @Override
@@ -128,6 +130,15 @@ public class HomeActivity extends AppCompatActivity implements Home.OnFragmentIn
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
+        // Associate searchable configuration with the SearchView
+
+        SearchManager searchManager =
+                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView =
+                (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(getComponentName()));
+
         return true;
     }
 
