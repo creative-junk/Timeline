@@ -13,9 +13,9 @@
 
     <!-- Chat Icon -->
     <item
-        android:id="@+id/action_chat"
-        android:icon="@drawable/ic_chat"
-        android:title="Chat"
+        android:id="@+id/action_addPeople"
+        android:icon="@drawable/ic_addpeople"
+        android:title="Add Friends"
         app:showAsAction="always" />
 
     <!-- Settings Icon -->

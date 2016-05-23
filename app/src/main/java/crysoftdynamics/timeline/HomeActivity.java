@@ -20,14 +20,14 @@ import java.util.List;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class HomeActivity extends AppCompatActivity implements Home.OnFragmentInteractionListener,AddFriends.OnFragmentInteractionListener,Notifications.OnFragmentInteractionListener,Explore.OnFragmentInteractionListener,NearMe.OnFragmentInteractionListener{
+public class HomeActivity extends AppCompatActivity implements Home.OnFragmentInteractionListener,AddFriends.OnFragmentInteractionListener,Notifications.OnFragmentInteractionListener,Explore.OnFragmentInteractionListener,NearMe.OnFragmentInteractionListener,Chat.OnFragmentInteractionListener{
 
     private Toolbar mToolBar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private int[] tabIcons = {
         R.drawable.ic_home,
-            R.drawable.ic_addpeople,
+            R.drawable.ic_chat,
             R.drawable.ic_notifications,
             R.drawable.ic_shutter,
             R.drawable.ic_nearme
@@ -94,7 +94,7 @@ public class HomeActivity extends AppCompatActivity implements Home.OnFragmentIn
 
         //Add the Fragments
         adapter.addFragment(new Home());
-        adapter.addFragment(new AddFriends());
+        adapter.addFragment(new Chat());
         adapter.addFragment(new Notifications());
         adapter.addFragment(new Explore());
         adapter.addFragment(new NearMe());
@@ -157,8 +157,8 @@ public class HomeActivity extends AppCompatActivity implements Home.OnFragmentIn
                 // User chose the "Search" action, show a Search..
                 return true;
 
-            case R.id.action_chat:
-                // User chose the "Chat" action, navigate to the Chat window...
+            case R.id.action_addPeople:
+                // User chose the "Add People" action, navigate to the Chat window...
                 return true;
 
             default:
