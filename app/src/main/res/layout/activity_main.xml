@@ -39,7 +39,9 @@
         android:text="@string/str_log_in"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/btn_login_text_size" />
+        android:textSize="@dimen/btn_login_text_size"
+        android:onClick="login"
+        android:nestedScrollingEnabled="false" />
 
     <TextView
         android:id="@+id/forgot_password"

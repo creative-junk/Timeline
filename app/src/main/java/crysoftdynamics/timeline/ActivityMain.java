@@ -1,14 +1,22 @@
 package crysoftdynamics.timeline;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
 public class ActivityMain extends AppCompatActivity {
+
+    public void login(View view){
+        Intent intent= new Intent(getApplicationContext(),HomeActivity.class);
+        startActivity(intent);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
