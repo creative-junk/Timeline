@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/ColorPrimary</item>
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
        <!-- <item name="android:textColorPrimary">@android:color/white</item> -->
-
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorSecondary">@android:color/white</item>
        <!-- Remove the overlay on the Actionbar/Toolbar -->
         <item name="android:windowContentOverlay">@null</item>

@@ -10,5 +10,5 @@
     <color name="ColorPrimaryDark">#462d8a</color>
     <color name="textColorPrimary">#fff</color>
     <color name="navigationBarColor">#462d8a</color>
-
+    <color name="colorAccent">#512DA8</color>
 </resources>
