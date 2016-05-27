@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:orientation="vertical"
+    tools:context="crysoftdynamics.timeline.SnapActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        app:tabGravity="fill"
+        android:layout_weight="2"
+
+        style="@style/TabLayoutStyle"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#1b191e"
+     />
+
+</LinearLayout>

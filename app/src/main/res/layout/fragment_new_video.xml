@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_preview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="crysoftdynamics.timeline.NewVideoFragment"
+    android:orientation="vertical">
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/video_surface_view" />
+    <ImageButton
+        android:id="@+id/camera_video_button"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_weight="1"
+        android:background="#1b191e"
+        android:src="@drawable/ic_video"/>
+
+</LinearLayout>

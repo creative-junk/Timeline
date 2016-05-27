@@ -22,6 +22,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class HomeActivity extends AppCompatActivity implements Home.OnFragmentInteractionListener,AddFriends.OnFragmentInteractionListener,Notifications.OnFragmentInteractionListener,Explore.OnFragmentInteractionListener,NearMe.OnFragmentInteractionListener,Chat.OnFragmentInteractionListener{
 
+
+
     private Toolbar mToolBar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -173,4 +175,5 @@ public class HomeActivity extends AppCompatActivity implements Home.OnFragmentIn
     public void onFragmentInteraction(Uri uri) {
 
     }
+
 }

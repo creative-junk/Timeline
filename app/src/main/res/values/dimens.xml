@@ -31,6 +31,8 @@
     <dimen name="password_width">210dp</dimen>
     <dimen name="password_margin_top">125dp</dimen>
     <dimen name="forgot_password_margin_bottom">28dp</dimen>
-
+    <!-- Photo sizes -->
+    <dimen name="photo_height">120dp</dimen>
+    <dimen name="photo_width">120dp</dimen>
 
 </resources>

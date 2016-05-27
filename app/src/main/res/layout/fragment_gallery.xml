@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="crysoftdynamics.timeline.GalleryFragment"
+    android:orientation="vertical"
+    android:id="@+id/galleryFragment">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <GridView
+            style="@style/GridView.PhotoGallery"
+            android:id="@android:id/list"
+            android:numColumns="3"/>
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="invisible"/>
+    </FrameLayout>
+    <!-- TODO: Update blank fragment layout -->
+
+
+</LinearLayout>
