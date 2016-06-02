@@ -5,10 +5,23 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/ColorPrimary</item>
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
-       <!-- <item name="android:textColorPrimary">@android:color/white</item> -->
+        <!-- <item name="android:textColorPrimary">@android:color/white</item> -->
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorSecondary">@android:color/white</item>
-       <!-- Remove the overlay on the Actionbar/Toolbar -->
+        <!-- Remove the overlay on the Actionbar/Toolbar -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="fontPath">fonts/sourcecodelight.ttf</item>
+    </style>
+    <!-- Theme with Toolbar -->
+    <style name="BarTheme" parent="Theme.AppCompat.DayNight">
+
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <!-- Remove the overlay on the Actionbar/Toolbar -->
         <item name="android:windowContentOverlay">@null</item>
         <item name="fontPath">fonts/sourcecodelight.ttf</item>
     </style>

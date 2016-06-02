@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="crysoftdynamics.timeline" >
-    
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,10 +19,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
             android:name=".ActivityMain"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +31,8 @@
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.default_searchable"
                 android:value=".SearchResultsActivity" />
@@ -41,13 +41,14 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyADg6RnGLCmxirTcNMGA2C5DpEveFo0K8Y" />
-
-        <meta-data android:name="com.google.android.gms.version"
+        <meta-data
+            android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <activity
             android:name=".SearchResultsActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
 
             <!-- to identify this activity as "searchable" -->
             <intent-filter>
@@ -64,15 +65,27 @@
             android:name=".SnapActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_snap"
+            android:screenOrientation="portrait"
             android:theme="@style/AppFullScreenTheme" >
         </activity>
         <activity
             android:name=".SaveActivity"
             android:label="@string/title_activity_save"
-            android:parentActivityName=".SnapActivity" >
+            android:parentActivityName=".SnapActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="crysoftdynamics.timeline.SnapActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".ActivityMain"
+            android:screenOrientation="portrait"
+            android:theme="@style/BarTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="crysoftdynamics.timeline.ActivityMain" />
         </activity>
     </application>
 

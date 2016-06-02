@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    tools:context="crysoftdynamics.timeline.RegisterActivity">
+<!--
+    <LinearLayout
+        android:id="@+id/textViewHolder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/firstNameTextView"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:text="First Name"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_color" />
+
+        <TextView
+            android:id="@+id/secondNameTextView"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="251dp"
+            android:layout_marginRight="251dp"
+            android:layout_toRightOf="@+id/firstNameTextView"
+            android:text="Last Name"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editViewHolder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHolder">
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emailContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editViewHolder"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_color" />
+
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/emailAddress"
+            android:ems="10"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+-->
+    <LinearLayout
+        android:id="@+id/foneContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/foneNumberTextView"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_color" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foneNumberTextView">
+
+            <EditText
+                android:id="@+id/codeEditView"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="+254" />
+
+            <EditText
+                android:id="@+id/code"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/codeEditView"
+                android:hint="Mobile Number" />
+
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+             android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foneContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/btn_login_margin_bottom"
+        android:background="@drawable/bg_discover"
+        android:paddingBottom="@dimen/btn_login_padding_bottom"
+        android:paddingLeft="@dimen/btn_login_padding_left"
+        android:paddingRight="@dimen/btn_login_padding_right"
+        android:paddingTop="@dimen/btn_login_padding_top"
+        android:text="Next"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>
