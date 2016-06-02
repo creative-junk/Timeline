@@ -1,16 +1,14 @@
 package crysoftdynamics.timeline;
 
 
-import android.database.Cursor;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.CursorLoader;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
@@ -81,7 +79,7 @@ public class NewSnapFragment extends Fragment {
                 }, null, new Camera.PictureCallback() {
                     @Override
                     public void onPictureTaken(byte[] data, Camera camera) {
-                        saveScaledSnap(data);
+                        //saveScaledSnap(data);
 
                         File snapFile =((SnapActivity)getActivity()).getOutputMediaFile(MEDIA_TYPE_IMAGE);
                         if (snapFile == null){
@@ -95,9 +93,17 @@ public class NewSnapFragment extends Fragment {
                             Uri fileUri=getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
                             String path = fileUri.getPath();
 
-                            //String thumbnailPath = getThumbnailPath(fileUri);
+                            //Long thumbId = Long.parseLong(fileUri.getLastPathSegment());
+                            String thumbnailPath = getThumbnailPath(path);
 
-                            //Log.i("Paths are:", "Image= " +path + "Thumbnail= " + thumbnailPath );
+
+
+                            Intent i=new Intent(getContext(), SaveActivity.class);
+                            i.putExtra("thumbnailPath",thumbnailPath);
+                            i.putExtra("fullimagePath",path);
+                            startActivity(i);
+
+                          Log.i("Paths are:", "Image= " +path );
                         } catch (FileNotFoundException e){
                             Log.d(TAG, "File Not Found" + e.getMessage());
                         } catch (IOException e){
@@ -150,29 +156,8 @@ public class NewSnapFragment extends Fragment {
      *
      * get Thumbnail path
      */
-    public String getThumbnailPath(Uri uri) {
-        String[] proj = { MediaStore.Images.Media.DATA };
-
-        // This method was deprecated in API level 11
-        // Cursor cursor = managedQuery(contentUri, proj, null, null, null);
-
-        CursorLoader cursorLoader = new CursorLoader(((SnapActivity)getActivity()), uri, proj, null, null, null);
-        Cursor cursor = cursorLoader.loadInBackground();
-
-        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media._ID);
-
-        cursor.moveToFirst();
-        long imageId = cursor.getLong(column_index);
-        //cursor.close();
-        String result="";
-        cursor = MediaStore.Images.Thumbnails.queryMiniThumbnail(((SnapActivity)getActivity()).getContentResolver(), imageId,
-                MediaStore.Images.Thumbnails.MINI_KIND, null);
-        if (cursor != null && cursor.getCount() > 0) {
-            cursor.moveToFirst();
-            result = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails.DATA));
-            cursor.close();
-        }
-        return result;
+    public String getThumbnailPath(String path) {
+       return null;
     }
     /*
     * ParseQueryAdapter loads ParseFiles into a ParseImageView at whatever size

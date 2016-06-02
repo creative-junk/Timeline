@@ -1,6 +1,8 @@
 package crysoftdynamics.timeline;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.parse.Parse;
 import com.parse.ParseACL;
@@ -11,6 +13,13 @@ import com.parse.ParseUser;
  * Created by Maxx on 5/25/2016.
  */
 public class SnapshotApplication extends Application {
+    //Shared Preferences
+    private static SharedPreferences preferences;
+    //Key for Saving the Near me Preference
+    private static String KEY_NEAR_ME="Near Me Key";
+    //The default value for Near Me
+    private static String NEAR_ME_ENABLED="No";
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -21,14 +30,14 @@ public class SnapshotApplication extends Application {
         ParseObject.registerSubclass(Snap.class);
 
 		/*
-		 * Fill in this section with your Parse credentials
+		 * Parse credentials
 		 */
-        //Parse.initialize(this, "photochat2vc09", "spq2vc1LVg09");
+        Parse.initialize(this, "photochat2vc09", "spq2vc1LVg09");
 
-        // Enable Local Datastore.
+        //Enable Local Datastore.
         Parse.enableLocalDatastore(this);
-
-        // Add your initialization code here
+        preferences = getSharedPreferences("com.parse.anywall", Context.MODE_PRIVATE);
+        /* Add your initialization code here
         Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
                         .applicationId("photochat2vc09")
                         .clientKey("spq2vc1LVg09")
@@ -66,6 +75,11 @@ public class SnapshotApplication extends Application {
 
 
     }
+    public static String getNearMeEnabled(){
+        return preferences.getString(KEY_NEAR_ME, NEAR_ME_ENABLED);
+    }
 
-
+    public static void setKeyNearMe(String keyNearMe) {
+        preferences.edit().putString(KEY_NEAR_ME, keyNearMe).commit();
+    }
 }

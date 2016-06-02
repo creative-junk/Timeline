@@ -28,7 +28,7 @@ import crysoftdynamics.timeline.util.SystemUiHider;
  *
  * @see SystemUiHider
  */
-public class SnapActivity extends AppCompatActivity implements GalleryFragment.OnFragmentInteractionListener {
+public class SnapActivity extends AppCompatActivity implements GalleryFragment.OnFragmentInteractionListener,SnapFragment.OnFragmentInteractionListener {
     //For use if we ever decide to split the Caption and the Photo into two fragments
     private Snap snap;
     private TabLayout tabLayout;

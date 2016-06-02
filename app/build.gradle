@@ -31,4 +31,5 @@ dependencies {
     compile 'com.parse:parse-android:1.13.0'
     compile 'com.parse:parseinterceptors:0.0.2'
     compile 'com.android.support:support-v4:24.0.0-alpha2'
+    compile 'com.google.android.gms:play-services:8.4.0'
 }
